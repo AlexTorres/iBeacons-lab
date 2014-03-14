@@ -7,6 +7,8 @@
 //
 
 #import "GLBViewController.h"
+#import "GLBCalendarVC.h"
+
 
 @interface GLBViewController ()
 
@@ -110,9 +112,8 @@
 -(void)responseFromServiceWasReceived:(NSString *)responseJSONAsString andResponseJSONAsData:(NSData *)responseJSONAsData{
     if ([responseJSONAsString rangeOfString:@"family_name"].location != NSNotFound) {
         NSError *error;
-        NSMutableDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseJSONAsData
-                                                                          options:NSJSONReadingMutableContainers
-                                                                            error:&error];
+
+        self.user = [[GLBUser alloc] initWithString:responseJSONAsString error:&error];
         if (error) {
             NSLog(@"An error occured while converting JSON data to dictionary.");
             return;
@@ -124,9 +125,9 @@
                 self.arrProfileInfo = [[NSMutableArray alloc] init];
             }
             
-            self.arrProfileInfoLabel = [[NSMutableArray alloc] initWithArray:[dictionary allKeys] copyItems:YES];
+            self.arrProfileInfoLabel = [[NSMutableArray alloc] initWithArray:[[self.user toDictionary] allKeys] copyItems:YES];
             for (int i=0; i<[self.arrProfileInfoLabel count]; i++) {
-                [self.arrProfileInfo addObject:[dictionary objectForKey:[self.arrProfileInfoLabel objectAtIndex:i]]];
+                [self.arrProfileInfo addObject:[[self.user toDictionary]  objectForKey:[self.arrProfileInfoLabel objectAtIndex:i]]];
             }
             
             [self.profileTableView reloadData];
@@ -137,15 +138,26 @@
 #pragma mark - Actions
 
 - (IBAction)showProfile:(id)sender {
-    [self.googleOAuth authorizeUserWithClienID:@"855181453471.apps.googleusercontent.com"
-                           andClientSecret:@"ooyZUrGgdp7rGM37SSRtReJ4"
+    [self.googleOAuth authorizeUserWithClienID:@"235444343229-k7bj8s0riteabglnos2gdunfie6h4nkc.apps.googleusercontent.com"
+                           andClientSecret:@"19iLAaf_9CUzRU9TS7pnmszX"
                              andParentView:self.view
-                                 andScopes:[NSArray arrayWithObjects:@"https://www.googleapis.com/auth/userinfo.profile", nil]
+                                 andScopes:[NSArray arrayWithObjects:@"https://www.googleapis.com/auth/userinfo.profile", @"https://www.googleapis.com/auth/calendar",@"https://www.googleapis.com/auth/calendar.readonly",nil]
      ];
 }
 
 - (IBAction)revokeAccess:(id)sender {
     [self.googleOAuth revokeAccessToken];
+}
+
+- (IBAction)calendarEvents:(id)sender {
+    [self performSegueWithIdentifier:@"gotoCalendar" sender:self];
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    GLBCalendarVC *calendarVC = segue.destinationViewController;
+    [calendarVC setUser:self.user];
+    [calendarVC setGoogleOAuth:self.googleOAuth];
+    [calendarVC setTitle:@"Events"];
 }
 
 @end

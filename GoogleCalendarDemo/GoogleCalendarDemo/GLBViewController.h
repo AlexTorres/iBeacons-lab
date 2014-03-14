@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GoogleOAuthLibrary/GoogleOAuth.h"
+#import "GoogleOAuth.h"
+#import "GLBUser.h"
 
 
 @interface GLBViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,GoogleOAuthDelegate>
@@ -15,11 +16,14 @@
 @property (weak, nonatomic) IBOutlet UITableView *profileTableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *profileButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *revokeButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *calendarEventsButton;
 @property (nonatomic, strong) NSMutableArray *arrProfileInfo;
 @property (nonatomic, strong) NSMutableArray *arrProfileInfoLabel;
 @property (nonatomic, strong) GoogleOAuth *googleOAuth;
+@property (nonatomic, strong) GLBUser *user;
 
 - (IBAction)showProfile:(id)sender;
 - (IBAction)revokeAccess:(id)sender;
+- (IBAction)calendarEvents:(id)sender;
 
 @end
