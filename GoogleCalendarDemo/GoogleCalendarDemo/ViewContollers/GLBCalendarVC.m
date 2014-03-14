@@ -7,6 +7,7 @@
 //
 
 #import "GLBCalendarVC.h"
+#import "GLBCalendarListItem.h"
 
 @interface GLBCalendarVC ()
 
@@ -29,7 +30,7 @@
     // Do any additional setup after loading the view.
 
     [self.googleOAuth setGoogleDelegate:self];
-    [self.googleOAuth callAPI:@"https://www.googleapis.com/calendar/v3/calendars/jalexandert@gmail.com/events"
+    [self.googleOAuth callAPI:@"https://www.googleapis.com/calendar/v3/users/me/calendarList"
                withHttpMethod:httpMethod_GET
            postParameterNames:nil
           postParameterValues:nil];
@@ -43,6 +44,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - ClassMethods
+- (void)callCalendarEvents
+{
+    
+    //"https://www.googleapis.com/calendar/v3/calendars/jalexandert@gmail.com/events"
+ 
+    GLBCalendarListItem * calendarListItem = [self.calendarList.items objectAtIndex:0];
+    NSString *path = [NSString stringWithFormat:@"https://www.googleapis.com/calendar/v3/calendars/%@/events",calendarListItem.calendarID];
+    NSLog(@"%@",calendarListItem.calendarID);
+    [self.googleOAuth setGoogleDelegate:self];
+    [self.googleOAuth callAPI:path
+               withHttpMethod:httpMethod_GET
+           postParameterNames:nil
+          postParameterValues:nil];
+    
+    
+
+}
+
+#pragma mark - GoogleApiDelegateMethods
 -(void)authorizationWasSuccessful{
 
 
@@ -62,7 +83,20 @@
 }
 -(void)responseFromServiceWasReceived:(NSString *)responseJSONAsString andResponseJSONAsData:(NSData *)responseJSONAsData{
      NSError *error;
-NSDictionary *calendarInfoDict = [NSJSONSerialization JSONObjectWithData:responseJSONAsData options:NSJSONReadingMutableContainers error:&error];
+    if ([responseJSONAsString rangeOfString:@"calendarList"].location != NSNotFound)
+    {
+        self.calendarList = [[GLBCalendarList alloc] initWithString:responseJSONAsString error:&error];
+        if (error) {
+            NSLog(@"An error occured while converting JSON data to dictionary.");
+            return;
+        }
+        [self callCalendarEvents];
+
+    }
+    else {
+    // TODO the event list
+    }
+
     
 }
 

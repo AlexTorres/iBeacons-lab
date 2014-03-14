@@ -9,6 +9,7 @@
 #import "GLBUser.h"
 
 @implementation GLBUser
+
 +(JSONKeyMapper*)keyMapper
 {
     return [[JSONKeyMapper alloc] initWithDictionary:@{

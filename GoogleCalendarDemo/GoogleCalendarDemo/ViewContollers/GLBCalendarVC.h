@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GoogleOAuth.h"
 #import "GLBUser.h"
+#import "GLBCalendarList.h"
 
 @interface GLBCalendarVC : UIViewController <GoogleOAuthDelegate>
 @property (nonatomic, strong) GoogleOAuth *googleOAuth;
 @property (nonatomic, strong) GLBUser *user;
+@property (nonatomic, strong) GLBCalendarList *calendarList;
 
 @end
