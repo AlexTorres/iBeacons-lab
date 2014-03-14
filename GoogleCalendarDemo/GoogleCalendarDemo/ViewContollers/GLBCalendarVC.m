@@ -50,7 +50,7 @@
     
     //"https://www.googleapis.com/calendar/v3/calendars/jalexandert@gmail.com/events"
  
-    GLBCalendarListItem * calendarListItem = [self.calendarList.items objectAtIndex:0];
+    GLBCalendarListItem * calendarListItem = self.calendarList.items[0];
     NSString *path = [NSString stringWithFormat:@"https://www.googleapis.com/calendar/v3/calendars/%@/events",calendarListItem.calendarID];
     NSLog(@"%@",calendarListItem.calendarID);
     [self.googleOAuth setGoogleDelegate:self];
