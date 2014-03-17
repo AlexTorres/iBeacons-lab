@@ -63,9 +63,47 @@
 
 }
 
+#pragma mark - UITableViewDelegate-UITableViewDataSource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return [self.calendarList.items count];
+    
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
+        
+        [[cell textLabel] setFont:[UIFont fontWithName:@"Trebuchet MS" size:15.0]];
+        [[cell textLabel] setShadowOffset:CGSizeMake(1.0, 1.0)];
+        [[cell textLabel] setShadowColor:[UIColor whiteColor]];
+        
+        [[cell detailTextLabel] setFont:[UIFont fontWithName:@"Trebuchet MS" size:13.0]];
+        [[cell detailTextLabel] setTextColor:[UIColor grayColor]];
+    }
+    
+   [[cell textLabel] setText:[[self.calendarList.items objectAtIndex:[indexPath row]] calendarID]];
+   [[cell detailTextLabel] setText:[[self.calendarList.items objectAtIndex:[indexPath row]] summary]];
+    
+    return cell;
+}
+
+
 #pragma mark - GoogleApiDelegateMethods
 -(void)authorizationWasSuccessful{
-
 
 }
 
@@ -87,10 +125,12 @@
     {
         self.calendarList = [[GLBCalendarList alloc] initWithString:responseJSONAsString error:&error];
         if (error) {
-            NSLog(@"An error occured while converting JSON data to dictionary.");
+            NSLog(@"An error occured while converting JSON data to dictionary. %@",[error localizedDescription]);
             return;
         }
-        [self callCalendarEvents];
+        
+        [self.calendarsTable reloadData];
+       // [self callCalendarEvents];
 
     }
     else {

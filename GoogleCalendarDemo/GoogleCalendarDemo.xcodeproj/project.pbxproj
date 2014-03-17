@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0A18EB18D7A10B0069CE47 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0A18EA18D7A10B0069CE47 /* CoreLocation.framework */; };
+		2E0A18F418D7A6440069CE47 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A18EF18D7A6440069CE47 /* Default@2x.png */; };
+		2E0A18F518D7A6440069CE47 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A18F018D7A6440069CE47 /* Default.png */; };
+		2E0A18F618D7A6440069CE47 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A18F118D7A6440069CE47 /* Default-568h@2x.png */; };
+		2E0A18FA18D7A6DF0069CE47 /* iconapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A18F718D7A6DF0069CE47 /* iconapp.png */; };
+		2E0A18FB18D7A6DF0069CE47 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A18F818D7A6DF0069CE47 /* icon@2x.png */; };
+		2E0A18FC18D7A6DF0069CE47 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E0A18F918D7A6DF0069CE47 /* icon.png */; };
+		2E1861AE18D78FA400DB3A87 /* GLBProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1861AD18D78FA400DB3A87 /* GLBProfileVC.m */; };
 		2E8E26E918D0ECBB0086A3F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8E26E818D0ECBB0086A3F2 /* Foundation.framework */; };
 		2E8E26EB18D0ECBB0086A3F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8E26EA18D0ECBB0086A3F2 /* CoreGraphics.framework */; };
 		2E8E26ED18D0ECBB0086A3F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8E26EC18D0ECBB0086A3F2 /* UIKit.framework */; };
@@ -41,6 +49,15 @@
 
 /* Begin PBXFileReference section */
 		113C8B2BE30F47069A4825E2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		2E0A18EA18D7A10B0069CE47 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2E0A18EF18D7A6440069CE47 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		2E0A18F018D7A6440069CE47 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		2E0A18F118D7A6440069CE47 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		2E0A18F718D7A6DF0069CE47 /* iconapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconapp.png; sourceTree = SOURCE_ROOT; };
+		2E0A18F818D7A6DF0069CE47 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		2E0A18F918D7A6DF0069CE47 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		2E1861AC18D78FA400DB3A87 /* GLBProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBProfileVC.h; sourceTree = "<group>"; };
+		2E1861AD18D78FA400DB3A87 /* GLBProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBProfileVC.m; sourceTree = "<group>"; };
 		2E8E26E518D0ECBB0086A3F2 /* GoogleCalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleCalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8E26E818D0ECBB0086A3F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2E8E26EA18D0ECBB0086A3F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0A18EB18D7A10B0069CE47 /* CoreLocation.framework in Frameworks */,
 				2E8E26EB18D0ECBB0086A3F2 /* CoreGraphics.framework in Frameworks */,
 				2E8E26ED18D0ECBB0086A3F2 /* UIKit.framework in Frameworks */,
 				2E8E26E918D0ECBB0086A3F2 /* Foundation.framework in Frameworks */,
@@ -99,6 +117,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0A18EC18D7A6240069CE47 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2E0A18F718D7A6DF0069CE47 /* iconapp.png */,
+				2E0A18F818D7A6DF0069CE47 /* icon@2x.png */,
+				2E0A18F918D7A6DF0069CE47 /* icon.png */,
+				2E0A18EF18D7A6440069CE47 /* Default@2x.png */,
+				2E0A18F018D7A6440069CE47 /* Default.png */,
+				2E0A18F118D7A6440069CE47 /* Default-568h@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		2E8E26DC18D0ECBB0086A3F2 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +153,7 @@
 		2E8E26E718D0ECBB0086A3F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E0A18EA18D7A10B0069CE47 /* CoreLocation.framework */,
 				2E8E26E818D0ECBB0086A3F2 /* Foundation.framework */,
 				2E8E26EA18D0ECBB0086A3F2 /* CoreGraphics.framework */,
 				2E8E26EC18D0ECBB0086A3F2 /* UIKit.framework */,
@@ -152,6 +184,7 @@
 		2E8E26EF18D0ECBB0086A3F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E0A18EC18D7A6240069CE47 /* images */,
 				2E8E26F018D0ECBB0086A3F2 /* GoogleCalendarDemo-Info.plist */,
 				2E8E26F118D0ECBB0086A3F2 /* InfoPlist.strings */,
 				2E8E26F418D0ECBB0086A3F2 /* main.m */,
@@ -203,6 +236,8 @@
 			children = (
 				F5627C0F18D2AB0000F65CC8 /* GLBCalendarVC.h */,
 				F5627C1018D2AB0000F65CC8 /* GLBCalendarVC.m */,
+				2E1861AC18D78FA400DB3A87 /* GLBProfileVC.h */,
+				2E1861AD18D78FA400DB3A87 /* GLBProfileVC.m */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -312,7 +347,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0A18F418D7A6440069CE47 /* Default@2x.png in Resources */,
+				2E0A18FB18D7A6DF0069CE47 /* icon@2x.png in Resources */,
+				2E0A18FC18D7A6DF0069CE47 /* icon.png in Resources */,
 				2E8E270118D0ECBB0086A3F2 /* Images.xcassets in Resources */,
+				2E0A18F518D7A6440069CE47 /* Default.png in Resources */,
+				2E0A18FA18D7A6DF0069CE47 /* iconapp.png in Resources */,
+				2E0A18F618D7A6440069CE47 /* Default-568h@2x.png in Resources */,
 				2E8E26F318D0ECBB0086A3F2 /* InfoPlist.strings in Resources */,
 				2E8E26FC18D0ECBB0086A3F2 /* Main.storyboard in Resources */,
 			);
@@ -368,6 +409,7 @@
 			files = (
 				F5CF1F9318D35FEE005A0D97 /* GLBCalendarList.m in Sources */,
 				2E8E26FF18D0ECBB0086A3F2 /* GLBViewController.m in Sources */,
+				2E1861AE18D78FA400DB3A87 /* GLBProfileVC.m in Sources */,
 				F5CF1F9718D360C6005A0D97 /* GLBCalendarListItem.m in Sources */,
 				2E8E26F918D0ECBB0086A3F2 /* GLBAppDelegate.m in Sources */,
 				2E8E272018D0F2990086A3F2 /* GoogleOAuth.m in Sources */,
@@ -497,8 +539,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 113C8B2BE30F47069A4825E2 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoogleCalendarDemo/GoogleCalendarDemo-Prefix.pch";
 				INFOPLIST_FILE = "GoogleCalendarDemo/GoogleCalendarDemo-Info.plist";
@@ -511,8 +551,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 113C8B2BE30F47069A4825E2 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoogleCalendarDemo/GoogleCalendarDemo-Prefix.pch";
 				INFOPLIST_FILE = "GoogleCalendarDemo/GoogleCalendarDemo-Info.plist";

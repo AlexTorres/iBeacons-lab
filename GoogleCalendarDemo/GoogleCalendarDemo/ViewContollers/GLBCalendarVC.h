@@ -11,9 +11,10 @@
 #import "GLBUser.h"
 #import "GLBCalendarList.h"
 
-@interface GLBCalendarVC : UIViewController <GoogleOAuthDelegate>
+@interface GLBCalendarVC : UIViewController <GoogleOAuthDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) GoogleOAuth *googleOAuth;
 @property (nonatomic, strong) GLBUser *user;
 @property (nonatomic, strong) GLBCalendarList *calendarList;
+@property (strong, nonatomic) IBOutlet UITableView *calendarsTable;
 
 @end

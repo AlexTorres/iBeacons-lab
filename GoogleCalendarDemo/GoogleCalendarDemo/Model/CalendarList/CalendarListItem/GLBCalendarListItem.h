@@ -18,8 +18,8 @@
 @property (strong, nonatomic) NSString* timeZone;
 @property (strong, nonatomic) NSString* colorId;
 @property (strong, nonatomic) NSString* backgroundColor;
-@property (strong, nonatomic) NSString* foregroundColor;
-@property (assign, nonatomic) BOOL selected;
+@property (strong, nonatomic) NSString * foregroundColor;
+@property (strong, nonatomic) NSString<Optional> *selected;
 @property (strong, nonatomic) NSString* accessRole;
 
 @end

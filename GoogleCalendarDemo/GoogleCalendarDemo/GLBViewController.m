@@ -8,7 +8,14 @@
 
 #import "GLBViewController.h"
 #import "GLBCalendarVC.h"
+#import "GLBProfileVC.h"
 
+
+#define kCalendarSegue @"gotoCalendar"
+#define kProfileSegue  @"gotoProfile"
+
+
+#define UDID @"B7A78FBB-103E-4851-AEC5-319780B77B9F"
 
 @interface GLBViewController ()
 
@@ -20,8 +27,6 @@
 {
     [super viewDidLoad];
     
-    [self.profileTableView setDelegate:self];
-    [self.profileTableView setDataSource:self];
     
     self.arrProfileInfo = [[NSMutableArray alloc] init];
     self.arrProfileInfoLabel = [[NSMutableArray alloc] init];
@@ -38,46 +43,47 @@
 }
 
 
-#pragma mark - UITableViewDelegate-UITableViewDataSource
+#pragma mark - init
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.arrProfileInfo count];
-}
-
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier];
+-(void)initiBeaconsComponents
+{
+    self.locationManager=[[CLLocationManager alloc] init];
+    self.locationManager.delegate=self;
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        [cell setAccessoryType:UITableViewCellAccessoryNone];
-        
-        [[cell textLabel] setFont:[UIFont fontWithName:@"Trebuchet MS" size:15.0]];
-        [[cell textLabel] setShadowOffset:CGSizeMake(1.0, 1.0)];
-        [[cell textLabel] setShadowColor:[UIColor whiteColor]];
-        
-        [[cell detailTextLabel] setFont:[UIFont fontWithName:@"Trebuchet MS" size:13.0]];
-        [[cell detailTextLabel] setTextColor:[UIColor grayColor]];
-    }
     
-    [[cell textLabel] setText:[self.arrProfileInfo objectAtIndex:[indexPath row]]];
-    [[cell detailTextLabel] setText:[self.arrProfileInfoLabel objectAtIndex:[indexPath row]]];
-    
-    return cell;
+    NSUUID *iBeaconudid=[[NSUUID alloc] initWithUUIDString:UDID];
+    self.iBeaconRegion=[[CLBeaconRegion alloc] initWithProximityUUID:iBeaconudid identifier:@"com.globant.ibeacon"];
+    [self.locationManager startMonitoringForRegion:self.iBeaconRegion];
 }
 
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60.0;
+#pragma mark- LocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
+    [self.locationManager startRangingBeaconsInRegion:self.iBeaconRegion];
 }
+
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
+{
+    [self.locationManager stopRangingBeaconsInRegion:self.iBeaconRegion];
+    self.iBeaconStatus.text=@"NO";
+}
+
+-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+    self.iBeaconStatus.text=@"Beacon Found";
+    CLBeacon *beaconData= [beacons firstObject];
+    
+    NSString *UDIDString= beaconData.proximityUUID.UUIDString;
+    NSString *major= [NSString stringWithFormat:@"%@",beaconData.major];
+    NSString *minor=[NSString stringWithFormat:@"%@",beaconData.minor];
+    
+    self.iBeaconUDID.text=UDIDString;
+    self.iBeaconMajor.text=major;
+    self.iBeaconMinor.text=minor;
+}
+
 
 #pragma mark - GoogleOAuthDelegate
 
@@ -96,7 +102,6 @@
     [self.arrProfileInfo removeAllObjects];
     [self.arrProfileInfoLabel removeAllObjects];
     
-    [self.profileTableView reloadData];
 }
 
 -(void)errorOccuredWithShortDescription:(NSString *)errorShortDescription andErrorDetails:(NSString *)errorDetails{
@@ -130,7 +135,8 @@
                 [self.arrProfileInfo addObject:[[self.user toDictionary]  objectForKey:[self.arrProfileInfoLabel objectAtIndex:i]]];
             }
             
-            [self.profileTableView reloadData];
+            [self performSegueWithIdentifier:kProfileSegue sender:self];
+            
         }
     }
 }
@@ -138,11 +144,13 @@
 #pragma mark - Actions
 
 - (IBAction)showProfile:(id)sender {
-    [self.googleOAuth authorizeUserWithClienID:@"235444343229-k7bj8s0riteabglnos2gdunfie6h4nkc.apps.googleusercontent.com"
-                           andClientSecret:@"19iLAaf_9CUzRU9TS7pnmszX"
+    [self.googleOAuth authorizeUserWithClienID:@"855181453471.apps.googleusercontent.com"
+                           andClientSecret:@"ooyZUrGgdp7rGM37SSRtReJ4"
                              andParentView:self.view
                                  andScopes:[NSArray arrayWithObjects:@"https://www.googleapis.com/auth/userinfo.profile", @"https://www.googleapis.com/auth/calendar",@"https://www.googleapis.com/auth/calendar.readonly",nil]
      ];
+    
+    
 }
 
 - (IBAction)revokeAccess:(id)sender {
@@ -150,14 +158,25 @@
 }
 
 - (IBAction)calendarEvents:(id)sender {
-    [self performSegueWithIdentifier:@"gotoCalendar" sender:self];
+    [self performSegueWithIdentifier:kCalendarSegue sender:self];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    GLBCalendarVC *calendarVC = segue.destinationViewController;
-    [calendarVC setUser:self.user];
-    [calendarVC setGoogleOAuth:self.googleOAuth];
-    [calendarVC setTitle:@"Events"];
+    if([[segue identifier] isEqualToString:kCalendarSegue])
+    {
+        GLBCalendarVC *calendarVC = segue.destinationViewController;
+        [calendarVC setUser:self.user];
+        [calendarVC setGoogleOAuth:self.googleOAuth];
+        [calendarVC setTitle:@"Calendars"];
+    }
+    
+    if([[segue identifier]isEqualToString:kProfileSegue])
+    {
+        GLBProfileVC *profileVC=segue.destinationViewController;
+        [profileVC setArrProfileInfo:self.arrProfileInfo];
+        [profileVC  setArrProfileInfoLabel:self.arrProfileInfoLabel];
+        [profileVC setTitle:@"Profile"];
+    }
 }
 
 @end

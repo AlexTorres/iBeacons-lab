@@ -9,14 +9,14 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="GLBViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="KIK-fg-M90"/>
+                        <viewControllerLayoutGuide type="bottom" id="CpE-0D-Fzd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fq3-XZ-B1q">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fq3-XZ-B1q">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -41,51 +41,136 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xmX-Md-fD8">
-                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iBeacon Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu9-hK-3L2">
+                                <rect key="frame" x="36" y="153" width="233" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-jf-Ydq">
+                                <rect key="frame" x="151" y="244" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-ck-dwJ">
+                                <rect key="frame" x="151" y="288" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjc-Tz-gaz">
+                                <rect key="frame" x="151" y="329" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UDID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-vk-c3M">
+                                <rect key="frame" x="27" y="244" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Major" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVX-H3-dP6">
+                                <rect key="frame" x="27" y="288" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U38-rw-kWu">
+                                <rect key="frame" x="27" y="336" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Fq3-XZ-B1q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3fD-ne-qg7"/>
-                            <constraint firstItem="Fq3-XZ-B1q" firstAttribute="top" secondItem="xmX-Md-fD8" secondAttribute="bottom" id="9JT-jk-R1b"/>
-                            <constraint firstAttribute="trailing" secondItem="Fq3-XZ-B1q" secondAttribute="trailing" id="9vd-7V-X5X"/>
-                            <constraint firstItem="Fq3-XZ-B1q" firstAttribute="trailing" secondItem="xmX-Md-fD8" secondAttribute="trailing" id="KUH-Cy-6WC"/>
-                            <constraint firstItem="xmX-Md-fD8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="64" id="L8s-lo-cr0"/>
-                            <constraint firstItem="Fq3-XZ-B1q" firstAttribute="leading" secondItem="xmX-Md-fD8" secondAttribute="leading" id="Ps4-pe-aBh"/>
-                            <constraint firstItem="Fq3-XZ-B1q" firstAttribute="top" secondItem="xmX-Md-fD8" secondAttribute="bottom" id="WoC-Bu-2Rr"/>
-                            <constraint firstAttribute="bottom" secondItem="Fq3-XZ-B1q" secondAttribute="bottom" id="dNf-OO-CvT"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vbl-lq-O2J"/>
                     <connections>
                         <outlet property="calendarEventsButton" destination="Bmf-4e-Rkt" id="dcE-uf-yEy"/>
+                        <outlet property="iBeaconMajor" destination="sxe-ck-dwJ" id="lDL-Bg-Hdy"/>
+                        <outlet property="iBeaconMinor" destination="sjc-Tz-gaz" id="DIO-Iu-djB"/>
+                        <outlet property="iBeaconStatus" destination="Nu9-hK-3L2" id="OPK-0S-c4Z"/>
+                        <outlet property="iBeaconUDID" destination="2cB-jf-Ydq" id="qcY-s7-yYP"/>
                         <outlet property="profileButton" destination="cKI-3L-ic6" id="VDY-9E-vBZ"/>
-                        <outlet property="profileTableView" destination="xmX-Md-fD8" id="bP3-0n-BVw"/>
                         <outlet property="revokeButton" destination="IrH-A1-0YS" id="7Zc-BB-iLg"/>
-                        <segue destination="yN5-TJ-731" kind="push" identifier="gotoCalendar" id="PII-tc-2yC"/>
+                        <segue destination="yN5-TJ-731" kind="push" identifier="gotoCalendar" id="qJS-L1-M9j"/>
+                        <segue destination="Dct-2E-ddX" kind="push" identifier="gotoProfile" id="uhZ-Sg-efN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="608" y="-56"/>
         </scene>
+        <!--ProfileVC-->
+        <scene sceneID="DkG-Vf-mLU">
+            <objects>
+                <viewController id="Dct-2E-ddX" customClass="GLBProfileVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9K7-ch-J2c"/>
+                        <viewControllerLayoutGuide type="bottom" id="mig-ci-hCE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MfG-R9-X68">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Poe-TF-Cyd">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dct-2E-ddX" id="QQO-CX-PuM"/>
+                                    <outlet property="delegate" destination="Dct-2E-ddX" id="8S2-3J-bUa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vgQ-e3-Hl2"/>
+                    <connections>
+                        <outlet property="profileTableView" destination="Poe-TF-Cyd" id="xn1-fO-uiP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGq-th-68U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="638"/>
+        </scene>
         <!--CalendarVC-->
         <scene sceneID="Mjo-Cf-6lX">
             <objects>
                 <viewController storyboardIdentifier="GLBCalendarVC" id="yN5-TJ-731" customClass="GLBCalendarVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="a8v-G1-HqE"/>
-                        <viewControllerLayoutGuide type="bottom" id="plv-TE-Z8d"/>
+                        <viewControllerLayoutGuide type="top" id="k5m-Hw-iyR"/>
+                        <viewControllerLayoutGuide type="bottom" id="dS0-In-SuG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JHg-K0-5uI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-4t-Y5R">
+                                <rect key="frame" x="0.0" y="65" width="320" height="502"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yN5-TJ-731" id="rkT-dv-gZI"/>
+                                    <outlet property="delegate" destination="yN5-TJ-731" id="xVw-aP-GOb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="f8M-Ow-smd"/>
+                    <connections>
+                        <outlet property="calendarsTable" destination="fR3-4t-Y5R" id="Mix-SZ-0nX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMS-87-IGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
