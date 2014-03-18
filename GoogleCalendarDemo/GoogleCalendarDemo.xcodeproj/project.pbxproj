@@ -20,7 +20,6 @@
 		2E8E26F318D0ECBB0086A3F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E26F118D0ECBB0086A3F2 /* InfoPlist.strings */; };
 		2E8E26F518D0ECBB0086A3F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E26F418D0ECBB0086A3F2 /* main.m */; };
 		2E8E26F918D0ECBB0086A3F2 /* GLBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E26F818D0ECBB0086A3F2 /* GLBAppDelegate.m */; };
-		2E8E26FC18D0ECBB0086A3F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E26FA18D0ECBB0086A3F2 /* Main.storyboard */; };
 		2E8E26FF18D0ECBB0086A3F2 /* GLBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E26FE18D0ECBB0086A3F2 /* GLBViewController.m */; };
 		2E8E270118D0ECBB0086A3F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E270018D0ECBB0086A3F2 /* Images.xcassets */; };
 		2E8E270818D0ECBB0086A3F2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8E270718D0ECBB0086A3F2 /* XCTest.framework */; };
@@ -29,6 +28,7 @@
 		2E8E271218D0ECBB0086A3F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E271018D0ECBB0086A3F2 /* InfoPlist.strings */; };
 		2E8E271418D0ECBB0086A3F2 /* GoogleCalendarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E271318D0ECBB0086A3F2 /* GoogleCalendarDemoTests.m */; };
 		2E8E272018D0F2990086A3F2 /* GoogleOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E271F18D0F2990086A3F2 /* GoogleOAuth.m */; };
+		2EE51BAA18D88DF200CC72EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E26FA18D0ECBB0086A3F2 /* Main.storyboard */; };
 		8395537CAC1A4E169381924A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64462EAB97D74240B5945698 /* libPods.a */; };
 		F5627C0D18D28DD200F65CC8 /* GLBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5627C0C18D28DD200F65CC8 /* GLBUser.m */; };
 		F5CF1F9318D35FEE005A0D97 /* GLBCalendarList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF1F9218D35FEE005A0D97 /* GLBCalendarList.m */; };
@@ -376,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE51BAA18D88DF200CC72EC /* Main.storyboard in Resources */,
 				2E0A18F418D7A6440069CE47 /* Default@2x.png in Resources */,
 				2E0A18FB18D7A6DF0069CE47 /* icon@2x.png in Resources */,
 				2E0A18FC18D7A6DF0069CE47 /* icon.png in Resources */,
@@ -384,7 +385,6 @@
 				2E0A18FA18D7A6DF0069CE47 /* iconapp.png in Resources */,
 				2E0A18F618D7A6440069CE47 /* Default-568h@2x.png in Resources */,
 				2E8E26F318D0ECBB0086A3F2 /* InfoPlist.strings in Resources */,
-				2E8E26FC18D0ECBB0086A3F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
