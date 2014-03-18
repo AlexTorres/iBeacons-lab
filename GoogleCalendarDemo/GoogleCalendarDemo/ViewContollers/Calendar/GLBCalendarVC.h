@@ -16,5 +16,6 @@
 @property (nonatomic, strong) GLBUser *user;
 @property (nonatomic, strong) GLBCalendarList *calendarList;
 @property (strong, nonatomic) IBOutlet UITableView *calendarsTable;
+@property (nonatomic, strong) GLBCalendarListItem *selectedCalendarListItem;
 
 @end

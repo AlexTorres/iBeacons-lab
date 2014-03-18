@@ -8,6 +8,9 @@
 
 #import "GLBCalendarVC.h"
 #import "GLBCalendarListItem.h"
+#import "GLBAddEventVC.h"
+
+#define kAddEventSegue @"gotoAddEvent"
 
 @interface GLBCalendarVC ()
 
@@ -100,7 +103,11 @@
     
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedCalendarListItem = self.calendarList.items[[indexPath row]];
+    [self performSegueWithIdentifier:kAddEventSegue sender:self];
+}
 
 #pragma mark - GoogleApiDelegateMethods
 -(void)authorizationWasSuccessful{
@@ -140,7 +147,7 @@
     
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -148,7 +155,12 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    GLBAddEventVC *addEventVC = segue.destinationViewController;
+    [addEventVC setUser:self.user];
+    [addEventVC setGoogleOAuth:self.googleOAuth];
+    [addEventVC setTitle:@"Add Event"];
+    [addEventVC setSelectedCalendarListItem:self.selectedCalendarListItem];
 }
-*/
+
 
 @end
