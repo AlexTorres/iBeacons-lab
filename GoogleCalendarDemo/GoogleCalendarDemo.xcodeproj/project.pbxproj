@@ -30,11 +30,11 @@
 		2E8E272018D0F2990086A3F2 /* GoogleOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E271F18D0F2990086A3F2 /* GoogleOAuth.m */; };
 		2EE51BAA18D88DF200CC72EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8E26FA18D0ECBB0086A3F2 /* Main.storyboard */; };
 		8395537CAC1A4E169381924A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64462EAB97D74240B5945698 /* libPods.a */; };
+		F52D757218D892E60058AB18 /* GLBProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F52D757118D892E60058AB18 /* GLBProfileVC.m */; };
 		F5627C0D18D28DD200F65CC8 /* GLBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5627C0C18D28DD200F65CC8 /* GLBUser.m */; };
 		F5CF1F9318D35FEE005A0D97 /* GLBCalendarList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF1F9218D35FEE005A0D97 /* GLBCalendarList.m */; };
 		F5CF1F9718D360C6005A0D97 /* GLBCalendarListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF1F9618D360C6005A0D97 /* GLBCalendarListItem.m */; };
 		F5CF1FF618D7E7DF005A0D97 /* GLBCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF1FF218D7E7DF005A0D97 /* GLBCalendarVC.m */; };
-		F5CF1FF718D7E7DF005A0D97 /* GLBProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF1FF518D7E7DF005A0D97 /* GLBProfileVC.m */; };
 		F5CF1FFB18D7EA50005A0D97 /* GLBAddEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF1FFA18D7EA50005A0D97 /* GLBAddEventVC.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +80,8 @@
 		2E8E271F18D0F2990086A3F2 /* GoogleOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleOAuth.m; path = GoogleOAuthLibrary/GoogleOAuth.m; sourceTree = "<group>"; };
 		2E8E272118D0F5C40086A3F2 /* GoogleOAuthDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GoogleOAuthDelegate.h; path = GoogleOAuthLibrary/GoogleOAuthDelegate.h; sourceTree = "<group>"; };
 		64462EAB97D74240B5945698 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52D757018D892E60058AB18 /* GLBProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBProfileVC.h; sourceTree = "<group>"; };
+		F52D757118D892E60058AB18 /* GLBProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBProfileVC.m; sourceTree = "<group>"; };
 		F5627C0B18D28DD200F65CC8 /* GLBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBUser.h; sourceTree = "<group>"; };
 		F5627C0C18D28DD200F65CC8 /* GLBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBUser.m; sourceTree = "<group>"; };
 		F5CF1F9118D35FEE005A0D97 /* GLBCalendarList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBCalendarList.h; sourceTree = "<group>"; };
@@ -88,8 +90,6 @@
 		F5CF1F9618D360C6005A0D97 /* GLBCalendarListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBCalendarListItem.m; sourceTree = "<group>"; };
 		F5CF1FF118D7E7DF005A0D97 /* GLBCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBCalendarVC.h; sourceTree = "<group>"; };
 		F5CF1FF218D7E7DF005A0D97 /* GLBCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBCalendarVC.m; sourceTree = "<group>"; };
-		F5CF1FF418D7E7DF005A0D97 /* GLBProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBProfileVC.h; sourceTree = "<group>"; };
-		F5CF1FF518D7E7DF005A0D97 /* GLBProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBProfileVC.m; sourceTree = "<group>"; };
 		F5CF1FF918D7EA50005A0D97 /* GLBAddEventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBAddEventVC.h; sourceTree = "<group>"; };
 		F5CF1FFA18D7EA50005A0D97 /* GLBAddEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBAddEventVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +224,15 @@
 			name = GoogleOAuthLibrary;
 			sourceTree = "<group>";
 		};
+		F52D756F18D892E60058AB18 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F52D757018D892E60058AB18 /* GLBProfileVC.h */,
+				F52D757118D892E60058AB18 /* GLBProfileVC.m */,
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
 		F5627C0A18D28B2B00F65CC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,8 +246,8 @@
 		F5627C0E18D2AAC600F65CC8 /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				F52D756F18D892E60058AB18 /* User Profile */,
 				F5CF1FF018D7E7DF005A0D97 /* Calendar */,
-				F5CF1FF318D7E7DF005A0D97 /* Profile */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -277,15 +286,6 @@
 				F5CF1FF218D7E7DF005A0D97 /* GLBCalendarVC.m */,
 			);
 			path = Calendar;
-			sourceTree = "<group>";
-		};
-		F5CF1FF318D7E7DF005A0D97 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				F5CF1FF418D7E7DF005A0D97 /* GLBProfileVC.h */,
-				F5CF1FF518D7E7DF005A0D97 /* GLBProfileVC.m */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		F5CF1FF818D7EA1B005A0D97 /* Add Event */ = {
@@ -438,11 +438,11 @@
 			files = (
 				F5CF1F9318D35FEE005A0D97 /* GLBCalendarList.m in Sources */,
 				2E8E26FF18D0ECBB0086A3F2 /* GLBViewController.m in Sources */,
-				F5CF1FF718D7E7DF005A0D97 /* GLBProfileVC.m in Sources */,
 				F5CF1FFB18D7EA50005A0D97 /* GLBAddEventVC.m in Sources */,
 				F5CF1FF618D7E7DF005A0D97 /* GLBCalendarVC.m in Sources */,
 				F5CF1F9718D360C6005A0D97 /* GLBCalendarListItem.m in Sources */,
 				2E8E26F918D0ECBB0086A3F2 /* GLBAppDelegate.m in Sources */,
+				F52D757218D892E60058AB18 /* GLBProfileVC.m in Sources */,
 				2E8E272018D0F2990086A3F2 /* GoogleOAuth.m in Sources */,
 				2E8E26F518D0ECBB0086A3F2 /* main.m in Sources */,
 				F5627C0D18D28DD200F65CC8 /* GLBUser.m in Sources */,
