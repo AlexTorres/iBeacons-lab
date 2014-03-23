@@ -21,6 +21,14 @@
 {
     [super viewDidLoad];
     
+    
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
     self.locationManager=[[CLLocationManager alloc] init];
     self.locationManager.delegate=self;
     
@@ -28,7 +36,6 @@
     NSUUID *iBeaconudid=[[NSUUID alloc] initWithUUIDString:UDID];
     self.iBeaconRegion=[[CLBeaconRegion alloc] initWithProximityUUID:iBeaconudid identifier:@"com.globant.ibeacon"];
     [self.locationManager startMonitoringForRegion:self.iBeaconRegion];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +65,9 @@
    NSString *UDIDString= beaconData.proximityUUID.UUIDString;
    NSString *major= [NSString stringWithFormat:@"%@",beaconData.major];
    NSString *minor=[NSString stringWithFormat:@"%@",beaconData.minor];
+   CLLocationAccuracy accurancy= beaconData.accuracy;
+    
+    
     
     self.iBeaconUDID.text=UDIDString;
     self.iBeaconMajor.text=major;

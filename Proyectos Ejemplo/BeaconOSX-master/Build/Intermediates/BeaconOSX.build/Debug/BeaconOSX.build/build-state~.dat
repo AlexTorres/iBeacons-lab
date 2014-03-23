@@ -1,0 +1,365 @@
+TBeaconOSX
+v6
+r1
+cCheck dependencies
+cProcessPCH /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.pch BeaconOSX/BeaconOSX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX normal x86_64
+cCopyStringsFile /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/InfoPlist.strings BeaconOSX/en.lproj/InfoPlist.strings
+cCpResource BeaconOSX/en.lproj/Credits.rtf Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf
+cCompileXIB /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Base.lproj/MainMenu.xib
+cCompileAssetCatalog /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Images.xcassets
+cProcessInfoPlistFile /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Info.plist /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Info.plist
+cTouch /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c000000005298F45D00000000000000AA
+t1385755741
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c00000000526DCD07000000000000044C
+t1382927623
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000526DCD0700000000000001DB
+t1382927623
+s475
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c00000000526DCD08000000000000253C
+t1382927624
+s9532
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOBluetooth.framework/IOBluetooth
+c00000000526DCD08000000000003C9E0
+t1382927624
+s248288
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOBluetoothUI.framework/IOBluetoothUI
+c00000000526DCD0800000000000147C8
+t1382927624
+s83912
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m
+c0000000052A10D7E0000000000001252
+t1386286462
+s4690
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m
+c0000000052A10D7E0000000000000B30
+t1386286462
+s2864
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Base.lproj/MainMenu.xib
+c0000000052A10D7E00000000000034EA
+t1386286462
+s13546
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Info.plist
+c0000000052A10D7E0000000000000450
+t1386286462
+s1104
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Prefix.pch
+c0000000052A10D7E00000000000000AC
+t1386286462
+s172
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Images.xcassets
+c0000000052A10D7E0000000000000066
+t1386286462
+s102
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/en.lproj/Credits.rtf
+c0000000052A10D7E00000000000001B4
+t1386286462
+s436
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/en.lproj/InfoPlist.strings
+c0000000052A10D7E000000000000002D
+t1386286462
+s45
+
+N/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m
+c0000000052A10D7E00000000000000FB
+t1386286462
+s251
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o
+t1394154736
+s55368
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o
+t1394154736
+s17684
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BeaconOSX.LinkFileList
+c0000000053191CEF000000000000019D
+t1394154735
+s413
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o
+t1394154736
+s2840
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_dependencies.txt
+t1394154740
+s252
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_generated_info.plist
+t1394154740
+s181
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.pch
+t1394154736
+s13705152
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
+t1394154735
+s102
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Info.plist
+t1394154740
+s1422
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX
+t1394154738
+s34596
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/PkgInfo
+t1394154740
+s8
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/Base.lproj/MainMenu.nib
+t1394154738
+s16350
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf
+t1394154738
+s436
+
+N/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/InfoPlist.strings
+t1394154738
+s92
+
+CBuild AST from /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m
+r0
+
+CBuild AST from /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m
+r0
+
+CBuild AST from /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesd8d5d06f54c9b841^0805d96f54c9b841^---0#1#1#--18"Check dependencies36"929A5940-57BB-422F-936C-D2313E4CAAEC-
+
+CCompileAssetCatalog /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Images.xcassets
+s415847538.432021
+e415847540.443262
+r1
+xCompileAssetCatalog
+x/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources
+x/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Images.xcassets
+o/* com.apple.actool.compilation-results */
+o/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/Assets.car
+o/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_generated_info.plist
+o
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"CompileAssetCatalog Build/Products/Debug/BeaconOSX.app/Contents/Resources BeaconOSX/Images.xcassets99"CompileAssetCatalog Build/Products/Debug/BeaconOSX.app/Contents/Resources BeaconOSX/Images.xcassets4fb16e7254c9b841^567e717454c9b841^-281"/* com.apple.actool.compilation-results *//Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/Assets.car/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@73"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Images.xcassets/0000000000000000^839"CompileAssetCatalog Build/Products/Debug/BeaconOSX.app/Contents/Resources BeaconOSX/Images.xcassets    cd /Users/kmila/Downloads/BeaconOSX-master    /Applications/Xcode.app/Contents/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_generated_info.plist --app-icon AppIcon --platform macosx --minimum-deployment-target 10.9 --target-device mac --compile /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Images.xcassets36"B1B0F294-3BD3-4839-8B65-2A515666BA71-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CCompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s415847536.799939
+e415847536.889527
+r1
+xCompileC
+xBuild/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o
+x/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m
+d/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.h
+d/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m202"CompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o BeaconOSX/BLCAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler1de9cc7054c9b841^d4b8e37054c9b841^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m0000000000000000^3182"CompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o BeaconOSX/BLCAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/kmila/Downloads/BeaconOSX-master    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-generated-files.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-own-target-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-all-target-headers.hmap -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-project-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources/x86_64 -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources -F/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug -include /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch -MMD -MT dependencies -MF /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.d --serialize-diagnostics /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.dia -c /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCAppDelegate.m -o /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o36"B931E9C2-9888-439A-B42B-0977FF65796C-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CCompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s415847536.800836
+e415847536.847876
+r1
+xCompileC
+xBuild/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o
+x/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m
+d/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m226"CompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o BeaconOSX/BLCBeaconAdvertisementData.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerbe30cd7054c9b841^1b10d97054c9b841^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m0000000000000000^3254"CompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o BeaconOSX/BLCBeaconAdvertisementData.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/kmila/Downloads/BeaconOSX-master    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-generated-files.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-own-target-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-all-target-headers.hmap -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-project-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources/x86_64 -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources -F/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug -include /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch -MMD -MT dependencies -MF /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.d --serialize-diagnostics /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.dia -c /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BLCBeaconAdvertisementData.m -o /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o36"525CD215-3B42-425C-812A-E4EDAAF9B6C2-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CCompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s415847536.800405
+e415847536.841397
+r1
+xCompileC
+xBuild/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o
+x/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m182"CompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o BeaconOSX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler5000cd7054c9b841^fe65d77054c9b841^---0#0#1#-19%DVTDocumentLocation2@63"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m0000000000000000^3122"CompileC Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o BeaconOSX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/kmila/Downloads/BeaconOSX-master    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-generated-files.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-own-target-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-all-target-headers.hmap -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-project-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources/x86_64 -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources -F/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug -include /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch -MMD -MT dependencies -MF /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.dia -c /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/main.m -o /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o36"2198698E-E25D-496E-901F-57B55E4DB9CE-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CCompileXIB /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Base.lproj/MainMenu.xib
+s415847538.430851
+e415847538.553206
+r1
+xCompileXIB
+x/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Base.lproj/MainMenu.xib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compiling /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Base.lproj/MainMenu.xib44"CompileXIB BeaconOSX/Base.lproj/MainMenu.xibae656e7254c9b841^4d9f8d7254c9b841^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Base.lproj/MainMenu.xib0000000000000000^545"CompileXIB BeaconOSX/Base.lproj/MainMenu.xib    cd /Users/kmila/Downloads/BeaconOSX-master    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 10.9 --output-format human-readable-text --compile /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/Base.lproj/MainMenu.nib /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/Base.lproj/MainMenu.xib36"22D5EF8D-44CE-43E0-8062-222DDEA2DF01-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CCopyStringsFile /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/InfoPlist.strings BeaconOSX/en.lproj/InfoPlist.strings
+s415847538.430493
+e415847538.432241
+r1
+xCopyStringsFile
+x/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/InfoPlist.strings
+xBeaconOSX/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy BeaconOSX/en.lproj/InfoPlist.strings133"CopyStringsFile Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/InfoPlist.strings BeaconOSX/en.lproj/InfoPlist.strings78476e7254c9b841^f4a66e7254c9b841^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/en.lproj/InfoPlist.strings0000000000000000^414"CopyStringsFile Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/InfoPlist.strings BeaconOSX/en.lproj/InfoPlist.strings    cd /Users/kmila/Downloads/BeaconOSX-master    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj -- BeaconOSX/en.lproj/InfoPlist.strings36"CAAC2E83-80FB-4688-8F64-03CDADA7FDE7-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CCpResource BeaconOSX/en.lproj/Credits.rtf Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf
+s415847538.430592
+e415847538.432148
+r1
+xCpResource
+xBeaconOSX/en.lproj/Credits.rtf
+xBuild/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Copy Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf116"CpResource BeaconOSX/en.lproj/Credits.rtf Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf9c526e7254c9b841^7fa26e7254c9b841^---0#0#1#-19%DVTDocumentLocation2@121"file:///Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf00340ceadeffdf42^450"CpResource BeaconOSX/en.lproj/Credits.rtf Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj/Credits.rtf    cd /Users/kmila/Downloads/BeaconOSX-master    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/en.lproj/Credits.rtf /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources/en.lproj36"71DA4EEC-5094-4ED5-ACAE-C270BD0AC9A3-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CLd /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX normal x86_64
+s415847536.923364
+e415847538.429697
+r1
+xLd
+x/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX
+xnormal
+xx86_64
+d/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BeaconOSX.LinkFileList
+d/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o
+d/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o
+d/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOBluetoothUI.framework/IOBluetoothUI
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOBluetooth.framework/IOBluetooth
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOBluetooth.framework/Versions/A/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/CoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Link /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX76"Ld Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX normal x86_64df6fec7054c9b841^15016e7254c9b841^---0#0#1#--1073"Ld Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX normal x86_64    cd /Users/kmila/Downloads/BeaconOSX-master    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug -F/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug -filelist /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BeaconOSX.LinkFileList -mmacosx-version-min=10.9 -fobjc-arc -fobjc-link-runtime -framework IOBluetoothUI -framework IOBluetooth -framework Cocoa -Xlinker -dependency_info -Xlinker /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BeaconOSX_dependency_info.dat -o /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX36"E9609299-6178-455F-A4F3-47FF2E0922F4-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CProcessInfoPlistFile /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Info.plist /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Info.plist
+s415847540.443865
+e415847540.445591
+r1
+xProcessInfoPlistFile
+x/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Info.plist
+x/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Process /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Info.plist106"ProcessInfoPlistFile Build/Products/Debug/BeaconOSX.app/Contents/Info.plist BeaconOSX/BeaconOSX-Info.plist9eb3717454c9b841^e812727454c9b841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Info.plist0000000000000000^649"ProcessInfoPlistFile Build/Products/Debug/BeaconOSX.app/Contents/Info.plist BeaconOSX/BeaconOSX-Info.plist    cd /Users/kmila/Downloads/BeaconOSX-master    builtin-infoPlistUtility /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Info.plist -genpkginfo /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/PkgInfo -expandbuildsettings -platform macosx -additionalcontentfile /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_generated_info.plist -o /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Info.plist36"EDC81DA2-1805-4509-8605-4AB93CF02C42-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CProcessPCH /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.pch BeaconOSX/BeaconOSX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s415847535.848986
+e415847536.799089
+r1
+xProcessPCH
+x/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.pch
+xBeaconOSX/BeaconOSX-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile BeaconOSX/BeaconOSX-Prefix.pch221"ProcessPCH Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.pch BeaconOSX/BeaconOSX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler0d6cd96f54c9b841^d594cc7054c9b841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Prefix.pch0000000000000000^3092"ProcessPCH Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.pch BeaconOSX/BeaconOSX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/kmila/Downloads/BeaconOSX-master    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-generated-files.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-own-target-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-all-target-headers.hmap -iquote /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/BeaconOSX-project-headers.hmap -I/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources/x86_64 -I/Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/DerivedSources -F/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug --serialize-diagnostics /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.dia -MMD -MT dependencies -MF /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.d -c /Users/kmila/Downloads/BeaconOSX-master/BeaconOSX/BeaconOSX-Prefix.pch -o /Users/kmila/Downloads/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-cgwtjjuisjtnypbzuhjjfebmokvq/BeaconOSX-Prefix.pch.pch36"E75E5B40-8C4F-4E31-A36D-9A0BE1CDAD73-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+
+CProcessPCH /Users/kmila/Library/Developer/Xcode/DerivedData/BeaconOSX-bbvqeaimzrpzruausgbvepuhtiqu/Index/PrecompiledHeaders/BeaconOSX-Prefix-cdbaclqmmmptxzdzaklkahpynmdc_ast/BeaconOSX-Prefix.pch.pch BeaconOSX/BeaconOSX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CTouch /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
+s415847540.446350
+e415847540.467629
+r1
+xTouch
+x/Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Touch /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app40"Touch Build/Products/Debug/BeaconOSX.app384e727454c9b841^d8b7777454c9b841^---0#0#1#--185"Touch Build/Products/Debug/BeaconOSX.app    cd /Users/kmila/Downloads/BeaconOSX-master    /usr/bin/touch -c /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app36"70C18197-5D50-48E7-BC5E-C895ECF9AC8E-
+b312F6A05-C7FC-4BF5-A17C-5F8C742D006A
+

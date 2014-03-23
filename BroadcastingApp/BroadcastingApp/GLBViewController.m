@@ -21,15 +21,22 @@
 {
     [super viewDidLoad];
     
+    
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: YES];
+    
     //Create the iBeacon  UDID
     
     NSUUID * iBeaconUdid=[[NSUUID alloc] initWithUUIDString:UDID];
     
     //Create the iBeacon Region
     
-    self.iBeaconRegion=[[CLBeaconRegion alloc] initWithProximityUUID:iBeaconUdid major:1 minor:1 identifier:@"com.globant.ibeacon"];
-    
-	// Do any additional setup after loading the view, typically from a nib.
+    self.iBeaconRegion=[[CLBeaconRegion alloc] initWithProximityUUID:iBeaconUdid major:1 minor:2 identifier:@"com.globant.ibeacon"];
+
 }
 
 - (void)didReceiveMemoryWarning
