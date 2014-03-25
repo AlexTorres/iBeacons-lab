@@ -40,26 +40,169 @@
 
 -(CGPoint)currentCoordinate
 {
-    if ([self.receivedBeaconDistances count] ==3){
-        CGPoint a = [self pointForBeaconWithMinor:1];
-        CGPoint b = [self pointForBeaconWithMinor:2];
-        CGPoint c = [self pointForBeaconWithMinor:2];
+    if ([self.receivedBeaconDistances count] >=3){
+//        CGPoint a = [self pointForBeaconWithMinor:1];
+//        CGPoint b = [self pointForBeaconWithMinor:2];
+//        CGPoint c = [self pointForBeaconWithMinor:2];
+//        
+//        CGFloat dA = [self.receivedBeaconDistances[@1] floatValue];
+//        CGFloat dB = [self.receivedBeaconDistances[@2] floatValue];
+//        CGFloat dC = [self.receivedBeaconDistances[@3] floatValue];
+//        
+//        
+//        CGFloat W, Z, x, y, y2;
+//        W = dA*dA - dB*dB - a.x*a.x - a.y*a.y + b.x*b.x + b.y*b.y;
+//        Z = dB*dB - dC*dC - b.x*b.x - b.y*b.y + c.x*c.x + c.y*c.y;
+//        
+//        x = (W*(c.y-b.y) - Z*(b.y-a.y)) / (2 * ((b.x-a.x)*(c.y-b.y) - (c.x-b.x)*(b.y-a.y)));
+//        y = (W - 2*x*(b.x-a.x)) / (2*(b.y-a.y));
+//        y2 = (Z - 2*x*(c.x-b.x)) / (2*(c.y-b.y));
+//        
+//        y = (y + y2) / 2;
         
-        CGFloat dA = [self.receivedBeaconDistances[@1] floatValue];
-        CGFloat dB = [self.receivedBeaconDistances[@2] floatValue];
-        CGFloat dC = [self.receivedBeaconDistances[@3] floatValue];
+        NSMutableArray *P1 = [[NSMutableArray alloc] initWithCapacity:0];
+        [P1 addObject:@([self pointForBeaconWithMinor:1].x)];
+        [P1 addObject:@([self pointForBeaconWithMinor:1].y)];
         
         
-        CGFloat W, Z, x, y, y2;
-        W = dA*dA - dB*dB - a.x*a.x - a.y*a.y + b.x*b.x + b.y*b.y;
-        Z = dB*dB - dC*dC - b.x*b.x - b.y*b.y + c.x*c.x + c.y*c.y;
+        NSMutableArray *P2 = [[NSMutableArray alloc] initWithCapacity:0];
+        [P2 addObject:@([self pointForBeaconWithMinor:2].x)];
+        [P2 addObject:@([self pointForBeaconWithMinor:2].y)];
         
-        x = (W*(c.y-b.y) - Z*(b.y-a.y)) / (2 * ((b.x-a.x)*(c.y-b.y) - (c.x-b.x)*(b.y-a.y)));
-        y = (W - 2*x*(b.x-a.x)) / (2*(b.y-a.y));
-        y2 = (Z - 2*x*(c.x-b.x)) / (2*(c.y-b.y));
+        NSMutableArray *P3 = [[NSMutableArray alloc] initWithCapacity:0];
+        [P3 addObject:@([self pointForBeaconWithMinor:3].x)];
+        [P3 addObject:@([self pointForBeaconWithMinor:3].y)];
         
-        y = (y + y2) / 2;
-        return CGPointMake(x, y);
+        //this is the distance between all the points and the unknown point
+        double DistA = [self.receivedBeaconDistances[@1] floatValue];;
+        double DistB = [self.receivedBeaconDistances[@2] floatValue];;
+        double DistC = [self.receivedBeaconDistances[@3] floatValue];;
+        
+        // ex = (P2 - P1)/(numpy.linalg.norm(P2 - P1))
+        NSMutableArray *ex = [[NSMutableArray alloc] initWithCapacity:0];
+        double temp = 0;
+        for (int i = 0; i < [P1 count]; i++) {
+            double t1 = [[P2 objectAtIndex:i] doubleValue];
+            double t2 = [[P1 objectAtIndex:i] doubleValue];
+            double t = t1 - t2;
+            temp += (t*t);
+        }
+        for (int i = 0; i < [P1 count]; i++) {
+            double t1 = [[P2 objectAtIndex:i] doubleValue];
+            double t2 = [[P1 objectAtIndex:i] doubleValue];
+            double exx = (t1 - t2)/sqrt(temp);
+            [ex addObject:[NSNumber numberWithDouble:exx]];
+        }
+        
+        // i = dot(ex, P3 - P1)
+        NSMutableArray *p3p1 = [[NSMutableArray alloc] initWithCapacity:0];
+        for (int i = 0; i < [P3 count]; i++) {
+            double t1 = [[P3 objectAtIndex:i] doubleValue];
+            double t2 = [[P1 objectAtIndex:i] doubleValue];
+            double t3 = t1 - t2;
+            [p3p1 addObject:[NSNumber numberWithDouble:t3]];
+        }
+        
+        double ival = 0;
+        for (int i = 0; i < [ex count]; i++) {
+            double t1 = [[ex objectAtIndex:i] doubleValue];
+            double t2 = [[p3p1 objectAtIndex:i] doubleValue];
+            ival += (t1*t2);
+        }
+        
+        // ey = (P3 - P1 - i*ex)/(numpy.linalg.norm(P3 - P1 - i*ex))
+        NSMutableArray *ey = [[NSMutableArray alloc] initWithCapacity:0];
+        double p3p1i = 0;
+        for (int  i = 0; i < [P3 count]; i++) {
+            double t1 = [[P3 objectAtIndex:i] doubleValue];
+            double t2 = [[P1 objectAtIndex:i] doubleValue];
+            double t3 = [[ex objectAtIndex:i] doubleValue] * ival;
+            double t = t1 - t2 -t3;
+            p3p1i += (t*t);
+        }
+        for (int i = 0; i < [P3 count]; i++) {
+            double t1 = [[P3 objectAtIndex:i] doubleValue];
+            double t2 = [[P1 objectAtIndex:i] doubleValue];
+            double t3 = [[ex objectAtIndex:i] doubleValue] * ival;
+            double eyy = (t1 - t2 - t3)/sqrt(p3p1i);
+            [ey addObject:[NSNumber numberWithDouble:eyy]];
+        }
+        
+        
+        // ez = numpy.cross(ex,ey)
+        // if 2-dimensional vector then ez = 0
+        NSMutableArray *ez = [[NSMutableArray alloc] initWithCapacity:0];
+        double ezx;
+        double ezy;
+        double ezz;
+        if ([P1 count] !=3){
+            ezx = 0;
+            ezy = 0;
+            ezz = 0;
+            
+        }else{
+            ezx = ([[ex objectAtIndex:1] doubleValue]*[[ey objectAtIndex:2]doubleValue]) - ([[ex objectAtIndex:2]doubleValue]*[[ey objectAtIndex:1]doubleValue]);
+            ezy = ([[ex objectAtIndex:2] doubleValue]*[[ey objectAtIndex:0]doubleValue]) - ([[ex objectAtIndex:0]doubleValue]*[[ey objectAtIndex:2]doubleValue]);
+            ezz = ([[ex objectAtIndex:0] doubleValue]*[[ey objectAtIndex:1]doubleValue]) - ([[ex objectAtIndex:1]doubleValue]*[[ey objectAtIndex:0]doubleValue]);
+            
+        }
+        
+        [ez addObject:[NSNumber numberWithDouble:ezx]];
+        [ez addObject:[NSNumber numberWithDouble:ezy]];
+        [ez addObject:[NSNumber numberWithDouble:ezz]];
+        
+        
+        // d = numpy.linalg.norm(P2 - P1)
+        double d = sqrt(temp);
+        
+        // j = dot(ey, P3 - P1)
+        double jval = 0;
+        for (int i = 0; i < [ey count]; i++) {
+            double t1 = [[ey objectAtIndex:i] doubleValue];
+            double t2 = [[p3p1 objectAtIndex:i] doubleValue];
+            jval += (t1*t2);
+        }
+        
+        // x = (pow(DistA,2) - pow(DistB,2) + pow(d,2))/(2*d)
+        double xval = (pow(DistA,2) - pow(DistB,2) + pow(d,2))/(2*d);
+        
+        // y = ((pow(DistA,2) - pow(DistC,2) + pow(i,2) + pow(j,2))/(2*j)) - ((i/j)*x)
+        double yval = ((pow(DistA,2) - pow(DistC,2) + pow(ival,2) + pow(jval,2))/(2*jval)) - ((ival/jval)*xval);
+        
+        // z = sqrt(pow(DistA,2) - pow(x,2) - pow(y,2))
+        // if 2-dimensional vector then z = 0
+        double zval;
+        if ([P1 count] !=3){
+            zval = 0;
+        }else{
+            zval = sqrt(pow(DistA,2) - pow(xval,2) - pow(yval,2));
+        }
+        
+        // triPt = P1 + x*ex + y*ey + z*ez
+        NSMutableArray *triPt = [[NSMutableArray alloc] initWithCapacity:0];
+        for (int i = 0; i < [P1 count]; i++) {
+            double t1 = [[P1 objectAtIndex:i] doubleValue];
+            double t2 = [[ex objectAtIndex:i] doubleValue] * xval;
+            double t3 = [[ey objectAtIndex:i] doubleValue] * yval;
+            double t4 = [[ez objectAtIndex:i] doubleValue] * zval;
+            double triptx = t1+t2+t3+t4;
+            [triPt addObject:[NSNumber numberWithDouble:triptx]];
+        }
+        
+        NSLog(@"ex %@",ex);
+        NSLog(@"i %f",ival);
+        NSLog(@"ey %@",ey);
+        NSLog(@"d %f",d);
+        NSLog(@"j %f",jval);
+        NSLog(@"x %f",xval);
+        NSLog(@"y %f",yval);
+        NSLog(@"y %f",yval);
+        NSLog(@"final result %@",triPt);
+        
+        
+        
+        
+        return CGPointMake([triPt[0] floatValue], [triPt[1] floatValue]);
     }
     return CGPointMake(-1, -1);
     
@@ -142,7 +285,7 @@
         return CGPointMake(0, 0);
     }
     else if(minor==2){
-        return CGPointMake(0, 10);
+        return CGPointMake(0, 5);
     } else{
         return CGPointMake(5, 10);
     }
