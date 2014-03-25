@@ -7,16 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import <CoreBluetooth/CoreBluetooth.h>
+#import "GLBBeaconAdvertiser.h"
 
-@interface GLBViewController : UIViewController<CBPeripheralManagerDelegate>
+@interface GLBViewController : UIViewController <UITextFieldDelegate>
 
 
-@property(strong,nonatomic)IBOutlet UILabel * IBeaconStatus;
-@property(strong,nonatomic)CLBeaconRegion *iBeaconRegion;
-@property(strong,nonatomic)NSDictionary *iBeaconData;
-@property(strong,nonatomic)CBPeripheralManager *iBeaconManager;
+
 
 
 @end

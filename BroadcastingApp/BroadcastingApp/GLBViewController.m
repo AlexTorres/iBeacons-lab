@@ -9,72 +9,89 @@
 #import "GLBViewController.h"
 
 
-#define UDID @"B7A78FBB-103E-4851-AEC5-319780B77B9F"
+@interface GLBViewController () <GLBBeaconAdvertiserDelegate>
 
-@interface GLBViewController ()
+@property(strong,nonatomic) IBOutlet UILabel * statusLabel;
+@property (weak, nonatomic) IBOutlet UITextField *majorTextField;
+@property (weak, nonatomic) IBOutlet UITextField *minorTextField;
+@property (weak, nonatomic) IBOutlet UIButton *broadcastButton;
+
+@property(strong,nonatomic) GLBBeaconAdvertiser *beaconAdvertiser;
 
 @end
 
 @implementation GLBViewController
 
-- (void)viewDidLoad
+#pragma mark - Properties
+
+#define UDID @"B7A78FBB-103E-4851-AEC5-319780B77B9F"
+#define IDENTIFIER @"com.globant.ibeacon"
+
+- (GLBBeaconAdvertiser *)beaconAdvertiser
 {
-    [super viewDidLoad];
+    if(!_beaconAdvertiser){
+        _beaconAdvertiser = [[GLBBeaconAdvertiser alloc] init];
+        _beaconAdvertiser.delegate = self;
+        _beaconAdvertiser.beaconIdentifier = IDENTIFIER;
+        _beaconAdvertiser.beaconUUDID = [[NSUUID alloc] initWithUUIDString:UDID];
+        _beaconAdvertiser.beaconMajor = [self.majorTextField.text integerValue];
+        _beaconAdvertiser.beaconMinor = [self.minorTextField.text integerValue];
+    }
     
-    
-	// Do any additional setup after loading the view, typically from a nib.
+    return _beaconAdvertiser;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear: YES];
-    
-    //Create the iBeacon  UDID
-    
-    NSUUID * iBeaconUdid=[[NSUUID alloc] initWithUUIDString:UDID];
-    
-    //Create the iBeacon Region
-    
-    self.iBeaconRegion=[[CLBeaconRegion alloc] initWithProximityUUID:iBeaconUdid major:1 minor:2 identifier:@"com.globant.ibeacon"];
+#pragma mark- ViewController Actions
 
+- (IBAction)didSelectBroadcastButton:(UIButton *)sender
+{
+    if (self.beaconAdvertiser.isAdvertising) {
+        [self.beaconAdvertiser stopAdvertising];
+        [sender setTitle:@"Start Broadcast" forState:UIControlStateNormal];
+        self.statusLabel.text = @"Stopped";
+    }
+    else {
+         self.statusLabel.text = @"Broadcasting...";
+        [self.beaconAdvertiser startAdvertising];
+        [sender setTitle:@"Stop Broadcast" forState:UIControlStateNormal];
+    }
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - BeaconBroadcasterDelegate
+
+- (void)advertiser:(GLBBeaconAdvertiser *)beaconBroadcaster
+   didFailWithError:(NSError *)error
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark- ViewControllerActions
-
--(IBAction)broadcastButton:(id)sender
-{
-    //Obtain the Beacon Data
-    self.iBeaconData=[self.iBeaconRegion peripheralDataWithMeasuredPower:nil];
-    
-    //Obtain the Bluetooth Status
-    self.iBeaconManager=[[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil ];
-}
-
-#pragma mark- CBPeripheraDelegate
-
--(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
-{
-    switch (peripheral.state) {
-        case CBPeripheralManagerStatePoweredOn:
-            self.IBeaconStatus.text=@"Broadcasting......";
-            [self.iBeaconManager startAdvertising:self.iBeaconData];
+    NSInteger code = error.code;
+    switch (code) {
+        case GLBBluetoothOff:
+            self.statusLabel.text = @"Bluetooth is off";
             break;
-        case CBPeripheralManagerStatePoweredOff:
-            self.IBeaconStatus.text=@"Stopped......";
-            [self.iBeaconManager stopAdvertising];
+        case GLBBeaconUnsupported:
+            self.statusLabel.text = @"Beacon functionality is unsupported";
             break;
-        case CBPeripheralManagerStateUnsupported:
-            self.IBeaconStatus.text=@"Unsupported......";
+        case GLBBluetoothRestricted:
+            self.statusLabel.text = @"Bluetooth is restricted";
             break;
         default:
+            self.statusLabel.text = @"Unknown Error";
             break;
     }
+    [self.broadcastButton setTitle:@"Start Broadcast" forState:UIControlStateNormal];
+
+}
+
+#pragma mark - TextField Delegate
+
+-(BOOL) textFieldShouldReturn: (UITextField *) textField
+{
+    [textField resignFirstResponder];
+    if (textField == self.majorTextField){
+        self.beaconAdvertiser.beaconMajor = [self.majorTextField.text integerValue];
+    } else if (textField == self.minorTextField){
+        self.beaconAdvertiser.beaconMinor = [self.minorTextField.text integerValue];
+    }
+    return YES;
 }
 
 @end

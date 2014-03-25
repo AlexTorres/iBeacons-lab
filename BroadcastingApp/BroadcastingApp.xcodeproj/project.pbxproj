@@ -23,6 +23,7 @@
 		2E29DBB618C65FB6008E2DE9 /* BroadcastingAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E29DBB518C65FB6008E2DE9 /* BroadcastingAppTests.m */; };
 		2E29DBC118C66190008E2DE9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E29DBBF18C66190008E2DE9 /* CoreBluetooth.framework */; };
 		2E29DBC218C66190008E2DE9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E29DBC018C66190008E2DE9 /* CoreLocation.framework */; };
+		617BA7BD18DCC76700C18F35 /* GLBBeaconAdvertiser.m in Sources */ = {isa = PBXBuildFile; fileRef = 617BA7BC18DCC76700C18F35 /* GLBBeaconAdvertiser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		2E29DBB518C65FB6008E2DE9 /* BroadcastingAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BroadcastingAppTests.m; sourceTree = "<group>"; };
 		2E29DBBF18C66190008E2DE9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		2E29DBC018C66190008E2DE9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		617BA7BB18DCC76700C18F35 /* GLBBeaconAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBBeaconAdvertiser.h; sourceTree = "<group>"; };
+		617BA7BC18DCC76700C18F35 /* GLBBeaconAdvertiser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBBeaconAdvertiser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				2E29DB9C18C65FB6008E2DE9 /* Main.storyboard */,
 				2E29DB9F18C65FB6008E2DE9 /* GLBViewController.h */,
 				2E29DBA018C65FB6008E2DE9 /* GLBViewController.m */,
+				617BA7BB18DCC76700C18F35 /* GLBBeaconAdvertiser.h */,
+				617BA7BC18DCC76700C18F35 /* GLBBeaconAdvertiser.m */,
 				2E29DBA218C65FB6008E2DE9 /* Images.xcassets */,
 				2E29DB9118C65FB6008E2DE9 /* Supporting Files */,
 			);
@@ -205,11 +210,11 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = GLB;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Camila Gaitan Mosquera";
 				TargetAttributes = {
 					2E29DB8618C65FB6008E2DE9 = {
-						DevelopmentTeam = 9FKJ2LNH2Z;
+						DevelopmentTeam = GJNZLE2TH2;
 					};
 					2E29DBA718C65FB6008E2DE9 = {
 						TestTargetID = 2E29DB8618C65FB6008E2DE9;
@@ -263,6 +268,7 @@
 			files = (
 				2E29DBA118C65FB6008E2DE9 /* GLBViewController.m in Sources */,
 				2E29DB9B18C65FB6008E2DE9 /* GLBAppDelegate.m in Sources */,
+				617BA7BD18DCC76700C18F35 /* GLBBeaconAdvertiser.m in Sources */,
 				2E29DB9718C65FB6008E2DE9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +323,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -356,7 +361,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -391,10 +395,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroadcastingApp/BroadcastingApp-Prefix.pch";
 				INFOPLIST_FILE = "BroadcastingApp/BroadcastingApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -405,10 +411,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BroadcastingApp/BroadcastingApp-Prefix.pch";
 				INFOPLIST_FILE = "BroadcastingApp/BroadcastingApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -416,7 +424,6 @@
 		2E29DBBD18C65FB6008E2DE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BroadcastingApp.app/BroadcastingApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -439,7 +446,6 @@
 		2E29DBBE18C65FB6008E2DE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BroadcastingApp.app/BroadcastingApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
