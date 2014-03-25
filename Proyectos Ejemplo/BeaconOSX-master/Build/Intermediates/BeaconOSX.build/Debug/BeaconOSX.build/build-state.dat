@@ -395,20 +395,20 @@ t1386286462
 s251
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCAppDelegate.o
-t1395761598
+t1395774086
 s54664
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BLCBeaconAdvertisementData.o
-t1395761598
+t1395774086
 s17536
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/BeaconOSX.LinkFileList
-c000000005331A1BD0000000000000281
-t1395761597
+c000000005331D2860000000000000281
+t1395774086
 s641
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/Objects-normal/x86_64/main.o
-t1395761598
+t1395774086
 s2944
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Intermediates/BeaconOSX.build/Debug/BeaconOSX.build/assetcatalog_dependencies.txt
@@ -420,7 +420,7 @@ t1394154740
 s181
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Intermediates/PrecompiledHeaders/BeaconOSX-Prefix-duulclcntmoabrehjafebvkvouyj/BeaconOSX-Prefix.pch.pch
-t1395761598
+t1395774086
 s13737520
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
@@ -432,7 +432,7 @@ t1394154740
 s1422
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/MacOS/BeaconOSX
-t1395761600
+t1395774086
 s34900
 
 N/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/PkgInfo
@@ -583,7 +583,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies2d777e1edae1b841^83fa861edae1b841^---0#1#1#--18"Check dependencies36"9C0924D8-0D2C-40C1-9BCB-87FEC3218C70-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies713d0a320be2b841^b28415320be2b841^---0#1#1#--18"Check dependencies36"2999E3DF-8DFA-4B26-8EB4-302F204A9352-
 
 CCompileAssetCatalog /Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons\ Lab/iBeacons-lab/Proyectos\ Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app/Contents/Resources /Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons\ Lab/iBeacons-lab/Proyectos\ Ejemplo/BeaconOSX-master/BeaconOSX/Images.xcassets
 r0
@@ -935,13 +935,13 @@ CProcessPCH /Users/kmila/Library/Developer/Xcode/DerivedData/BeaconOSX-ciahqockc
 r0
 
 CTouch /Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons\ Lab/iBeacons-lab/Proyectos\ Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
-s417454400.217094
-e417454400.259137
+s417467186.081593
+e417467186.085716
 r1
 xTouch
 x/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection156"Touch /Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app40"Touch Build/Products/Debug/BeaconOSX.app6b9e3740d9e1b841^82584240d9e1b841^---0#0#1#--341"Touch Build/Products/Debug/BeaconOSX.app    cd "/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master"    /usr/bin/touch -c /Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons\ Lab/iBeacons-lab/Proyectos\ Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app36"732797A1-F779-4E25-A64A-99708AF4BA61-
-b7E7D19A7-0B2D-4F32-8FE8-BCCD936A6986
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection156"Touch /Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app40"Touch Build/Products/Debug/BeaconOSX.appeaec14320be2b841^690116320be2b841^---0#0#1#--341"Touch Build/Products/Debug/BeaconOSX.app    cd "/Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons Lab/iBeacons-lab/Proyectos Ejemplo/BeaconOSX-master"    /usr/bin/touch -c /Users/kmila/Documents/KMILA/TRABAJO/GLOBANT/LABS/Repo-iBeacons\ Lab/iBeacons-lab/Proyectos\ Ejemplo/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app36"30D57706-A053-4942-BFEA-88FFA7462310-
+bAE85E017-41F8-4D5F-B9BE-75823F50897A
 
 CTouch /Users/kmila/Downloads/BeaconOSX-master/Build/Products/Debug/BeaconOSX.app
 s415847540.446350
