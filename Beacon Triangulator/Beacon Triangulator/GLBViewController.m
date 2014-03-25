@@ -287,7 +287,7 @@
     else if(minor==2){
         return CGPointMake(0, 5);
     } else{
-        return CGPointMake(5, 10);
+        return CGPointMake(3, 4.5);
     }
 }
 
