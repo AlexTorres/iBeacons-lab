@@ -22,6 +22,7 @@
 		223583A718E1F227007F2BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 223583A518E1F227007F2BC4 /* InfoPlist.strings */; };
 		223583A918E1F227007F2BC4 /* Beacon_TriangulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223583A818E1F227007F2BC4 /* Beacon_TriangulatorTests.m */; };
 		223583B318E1F267007F2BC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223583B218E1F267007F2BC4 /* CoreLocation.framework */; };
+		F504F5A318E791EE007E5C76 /* GLBBeaconsPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = F504F5A218E791EE007E5C76 /* GLBBeaconsPlugin.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		223583A618E1F227007F2BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		223583A818E1F227007F2BC4 /* Beacon_TriangulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Beacon_TriangulatorTests.m; sourceTree = "<group>"; };
 		223583B218E1F267007F2BC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F504F5A118E791EE007E5C76 /* GLBBeaconsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBBeaconsPlugin.h; sourceTree = "<group>"; };
+		F504F5A218E791EE007E5C76 /* GLBBeaconsPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLBBeaconsPlugin.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 		2235838318E1F227007F2BC4 /* Beacon Triangulator */ = {
 			isa = PBXGroup;
 			children = (
+				F504F5A018E791D6007E5C76 /* UnityPlugin */,
 				2235838C18E1F227007F2BC4 /* GLBAppDelegate.h */,
 				2235838D18E1F227007F2BC4 /* GLBAppDelegate.m */,
 				2235839218E1F227007F2BC4 /* GLBViewController.h */,
@@ -154,6 +158,23 @@
 				223583A518E1F227007F2BC4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F504F5A018E791D6007E5C76 /* UnityPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				F504F5A418E7B047007E5C76 /* External */,
+				F504F5A118E791EE007E5C76 /* GLBBeaconsPlugin.h */,
+				F504F5A218E791EE007E5C76 /* GLBBeaconsPlugin.mm */,
+			);
+			path = UnityPlugin;
+			sourceTree = "<group>";
+		};
+		F504F5A418E7B047007E5C76 /* External */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F504F5A318E791EE007E5C76 /* GLBBeaconsPlugin.mm in Sources */,
 				2235839418E1F227007F2BC4 /* GLBViewController.m in Sources */,
 				2235838E18E1F227007F2BC4 /* GLBAppDelegate.m in Sources */,
 				2235838A18E1F227007F2BC4 /* main.m in Sources */,
@@ -461,6 +483,7 @@
 				223583AE18E1F227007F2BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		223583AF18E1F227007F2BC4 /* Build configuration list for PBXNativeTarget "Beacon TriangulatorTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +492,7 @@
 				223583B118E1F227007F2BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
