@@ -10,13 +10,14 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-
 #define UDID @"B7A78FBB-103E-4851-AEC5-319780B77B9F"
-@interface GLBBeaconsPlugin ()<CLLocationManagerDelegate>
+#define IDENTIFIER @"com.globant.ibeacon"
 
-@property(strong,nonatomic)CLLocationManager *locationManager;
-@property(strong,nonatomic)CLBeaconRegion *iBeaconRegion;
-@property(nonatomic,strong)  NSMutableDictionary *receivedBeaconDistances;
+@interface GLBBeaconsPlugin () <CLLocationManagerDelegate>
+
+@property(strong,nonatomic) CLLocationManager *locationManager;
+@property(strong,nonatomic) CLBeaconRegion *iBeaconRegion;
+@property(nonatomic,strong) NSMutableArray *receivedBeacons; // Of Clbeacons
 
 @end
 
@@ -24,80 +25,59 @@
 
 #pragma mark - Properties
 
--(NSMutableDictionary *)receivedBeaconDistances
+-(NSMutableArray *)receivedBeacons
 {
-    if (!_receivedBeaconDistances) {
-        _receivedBeaconDistances = [[NSMutableDictionary alloc] init];
+    if (!_receivedBeacons) {
+        _receivedBeacons = [[NSMutableArray alloc] init];
     }
-    return _receivedBeaconDistances;
+    return _receivedBeacons;
 }
 
--(CLBeaconRegion *)iBeaconRegion {
-    if(!_iBeaconRegion){
+-(CLBeaconRegion *)iBeaconRegion
+{
+    if (!_iBeaconRegion) {
         NSUUID *iBeaconudid=[[NSUUID alloc] initWithUUIDString:UDID];
         _iBeaconRegion =[[CLBeaconRegion alloc] initWithProximityUUID:iBeaconudid
-                                                           identifier:@"com.globant.ibeacon"];
+                                                           identifier:IDENTIFIER];
     }
     return _iBeaconRegion;
 }
 
--(CLLocationManager *)locationManager {
+-(CLLocationManager *)locationManager
+{
     if(!_locationManager) {
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.delegate = self;
     }
     return _locationManager;
 }
-// this function sent a JSON string from the beacons X , Y and distance. 
-- (NSString *)beaconsJson {
-    NSString *jsonStr;
-    NSMutableArray *beaconsArray = [[NSMutableArray alloc] initWithCapacity:0];
-    if([self.receivedBeaconDistances count]) {
-        for (NSInteger j = 1; j< [self.receivedBeaconDistances count]-2; j++) {
-            double dist = [[self.receivedBeaconDistances objectForKey:[NSString stringWithFormat:@"%i",j]] floatValue];
-            NSDictionary *beaconHash = @{ @"x": [NSNumber numberWithFloat:[self pointForBeaconWithMinor:j].x],
-                                         @"y": [NSNumber numberWithFloat:[self pointForBeaconWithMinor:j].y],
-                                         @"distance":[NSNumber numberWithDouble:dist]};
-            [beaconsArray addObject:beaconHash];
-        }
-        NSData *data = [NSJSONSerialization dataWithJSONObject:beaconsArray
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:nil];
-        jsonStr = [[NSString alloc] initWithData:data
-                                        encoding:NSUTF8StringEncoding];
-    }
-    return jsonStr;
-}
 
-- (id)init
+
+#pragma mark- Monitoring
+
+- (void) startMonitoringBeacons
 {
-    self = [super init];
-    return self;
-}
-
-- (void) startMonitoring {
     [self.locationManager startMonitoringForRegion:self.iBeaconRegion];
     [self.locationManager startRangingBeaconsInRegion:self.iBeaconRegion];
 }
 
 #pragma mark- LocationManagerDelegate
 
--(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+-(void)locationManager:(CLLocationManager *)manager
+        didEnterRegion:(CLRegion *)region
 {
     [self.locationManager startRangingBeaconsInRegion:self.iBeaconRegion];
 }
 
 - (NSArray *)filteredBeacons:(NSArray *)beacons
 {
-    // Filters duplicate beacons out; this may happen temporarily if the originating device changes its Bluetooth id
+    // Filters duplicate beacons out
     NSMutableArray *mutableBeacons = [beacons mutableCopy];
     
     NSMutableSet *lookup = [[NSMutableSet alloc] init];
     for (int index = 0; index < [beacons count]; index++) {
         CLBeacon *curr = [beacons objectAtIndex:index];
         NSString *identifier = [NSString stringWithFormat:@"%@/%@", curr.major, curr.minor];
-        
-        // this is very fast constant time lookup in a hash table
         
         if ([lookup containsObject:identifier]) {
             [mutableBeacons removeObjectAtIndex:index];
@@ -110,13 +90,11 @@
 
 -(void)locationManager:(CLLocationManager *)manager
        didRangeBeacons:(NSArray *)beacons
-              inRegion:(CLBeaconRegion *)region {
+              inRegion:(CLBeaconRegion *)region
+{
     NSArray *filteredBeacons = [self filteredBeacons:beacons];
-    for (CLBeacon *beaconData in filteredBeacons) {
-        self.receivedBeaconDistances[beaconData.minor] = @(beaconData.accuracy);
-        if (beaconData.proximity == CLProximityImmediate) {
-        }
-    }
+    [self.receivedBeacons removeAllObjects];
+    [self.receivedBeacons addObjectsFromArray:filteredBeacons];
 }
 
 -(CGPoint) pointForBeaconWithMinor:(NSUInteger)minor
@@ -130,8 +108,41 @@
         return CGPointMake(3, 4.5);
     }
     return  CGPointMake(-1, -1);
+    
 }
+
+#pragma mark- Unity Plugin
+
+// this function sent a JSON string from the beacons X , Y and distance.
+- (NSString *)beaconsJSON
+{
+    NSString *jsonStr;
+    NSMutableArray *beaconsArray = [[NSMutableArray alloc] init];
+    
+    for(CLBeacon *beacon in self.receivedBeacons) {
+        NSDictionary *beaconHash = @{ @"major": beacon.major,
+                                      @"minor": beacon.minor,
+                                      @"rssi":@(beacon.rssi)};
+        
+        [beaconsArray addObject:beaconHash];
+    }
+    
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"rssi" ascending:YES];
+    [beaconsArray sortUsingDescriptors:@[descriptor]];
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:beaconsArray
+                                                   options:NSJSONWritingPrettyPrinted
+                                                     error:nil];
+    jsonStr = [[NSString alloc] initWithData:data
+                                    encoding:NSUTF8StringEncoding];
+    return jsonStr;
+}
+
 @end
+
+
+#pragma mark- Unity Plugin
+
 static GLBBeaconsPlugin *delegateObject = nil;
 
 // Converts C style string to NSString
@@ -153,18 +164,21 @@ char* MakeStringCopy (const char* string)
 	strcpy(res, string);
 	return res;
 }
+
 // The wonderfull c ++
 extern "C"
 {
     void _StartBeaconsDetection ()
     {
-        if (delegateObject == nil)
-			delegateObject = [[GLBBeaconsPlugin alloc] init];
+        if (delegateObject == nil) {
+            delegateObject = [[GLBBeaconsPlugin alloc] init];
+            [delegateObject startMonitoringBeacons];
+        }
+        
     }
-    
     const char* _GetPositionArray ()
     {
-        return MakeStringCopy([[delegateObject beaconsJson] UTF8String]);
+        return MakeStringCopy([[delegateObject beaconsJSON] UTF8String]);
     }
     
 }

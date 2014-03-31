@@ -10,4 +10,6 @@
 
 @interface GLBBeaconsPlugin : NSObject
 
+
+
 @end
